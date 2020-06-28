@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+button {
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    background-color: #ea212d;
+    border: 0px;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 80px;
+    padding: 5px;
+    transition: background-color 0.4s ease;
+}
+
+button:hover {
+    background-color: #ff5c66;
+}
+
+.error {
+    font-style: italic;
+    color: #ea212d;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.info {
+    font-style: italic;
+    color: #4378cc;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #e6e6ff;
+    border: 1px solid #15153b;
+    width: 50%;
+    min-height: 50px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E7E7E8;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px lightgray;
+}
+
+nav {
+    width: 100%;
+    background-color: #3C435E;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    width: 70%;
+}
+
+nav ul li {
+    box-sizing: border-box;
+    display: flex;
+    height: 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav a {
+    display: flex;
+    flex-grow: 1;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s ease;
+
+}
+
+nav a:hover {
+    background-color: #676E95;
+}
+
+#pocetna {
+    display: flex;
+    width: 70%; 
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+#pocetna section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#pocetna section h2,
+#kategorija h2 {
+    padding: 0px 0px 5px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#pocetna .clanci {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 20px 10px;
+    background-color: white;
+}
+
+#pocetna article {
+    box-sizing: border-box;
+    display: flex;
+    width: 25%;
+    padding: 10px;
+    /* desni obrub koji se koristi kao separator */
+    border-right: 1px solid #d3d2d2;
+    transition: background-color 0.4s ease;
+}
+
+#pocetna article:last-child {
+    /* zadnji nema desni obrub */
+    border-right: 0px;
+}
+
+#pocetna article:hover,
+#kategorija article:hover {
+    background-color: #E7E7E8;
+}
+
+#pocetna article img,
+#kategorija article img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    padding-bottom: 5px;
+}
+
+#pocetna article h4,
+#kategorija article h4,
+#clanak article h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ea212d;
+    padding-bottom: 5px;
+}
+
+#pocetna article h3,
+#kategorija article h3 {
+    font-size: 18px;
+}
+
+.unos {
+    padding: 20px 0px;
+    width: 60%;
+}
+
+.prijava {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.unos form,
+.prijava form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.unos form div,
+.prijava form div {
+    padding: 10px 0px;
+}
+
+.unos form label,
+.prijava form label {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.unos form input[type="text"],
+.prijava form input[type="text"],
+.prijava form input[type="password"] {
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+}
+
+.unos form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+}
+
+.unos form input[type="text"], 
+.unos form textarea,
+.prijava form input[type="text"] {
+    font-family: 'Roboto', sans-serif;
+}
+
+.unos form .checkbox,
+.prijava form .checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.unos form .checkbox label,
+.prijava form .checkbox label {
+    padding: 0px;
+}
+
+.unos form .checkbox input,
+.prijava form .checkbox input {
+    margin-left: 10px;
+}
+
+.prijava form {
+    padding-top: 20px;
+}
+
+.prijava .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prijava .buttons button {
+    margin-bottom: 20px;
+}
+
+.prijava .message {
+    width: 95%;
+    padding: 5px 0px;
+}
+
+.prijava .buttons a,
+.prijava .message a {
+    color: #4c75a3;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.prijava #nastavak a {
+    text-transform: uppercase;
+}
+
+#administracija {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 0px;
+    align-items: center;
+    flex: 1;
+}
+
+#administracija section {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+#administracija h3 {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    padding: 10px 5px 5px 5px;
+}
+
+#administracija h2 {
+    padding-bottom: 10px;
+}
+
+#administracija #izmjenaBrisanje form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#administracija .clanci {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#administracija article {
+    box-sizing: border-box;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#administracija article img {
+    width: 100%;
+    height: 200px;
+    padding-bottom: 10px;
+    object-fit: cover;
+}
+
+#administracija .clanci #sadrzaj {
+    padding-bottom: 10px;
+}
+
+#administracija .clanci #buttons {
+    display: flex;
+}
+
+#administracija .clanci button {
+    margin-right: 5px;
+}
+
+.arhiviraniClanak img,
+.arhiviraniClanak h4 {
+    opacity: 0.5;
+}
+
+#administracija #izmjenaButton {
+    background-color: #4378cc;
+}
+
+#administracija #izmjenaButton:hover {
+    background-color: #578de2;
+}
+
+#kategorija {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+#kategorija .clanci {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px 10px 20px 10px;
+}
+
+#kategorija h2 {
+    padding-top: 40px;
+}
+
+#kategorija  article {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 10px;
+    transition: background-color 0.4s ease;
+}
+
+#kategorija article img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+#clanak {
+    width: 50%;
+    background-color: white;
+    margin: 40px 0px 20px 0px;
+    padding: 10px 10px 20px 10px;
+}
+
+#clanak article {
+    padding: 10px;
+}
+
+#clanak img {
+    width: 100%;
+}
+
+#clanak h1 {
+    font-size: 40px;
+}
+
+#clanak #datum {
+    padding: 10px 0px 20px 0px;
+    color: #afabc0;
+}
+
+#clanak #tekstClanak {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 22px;
+    font-family: 'PT Serif', serif;
+}
+
+#clanak #tekstClanak p {
+    padding-bottom: 8px;
+}
+
+#clanak #tekstClanak p:first-child {
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100px;
+}
+
+footer .copyright {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color: #676E95;
+}
+
+#clanakCopyright {
+    width: 50%;
+}
+
+@media (max-width: 960px) {
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    #pocetna, 
+    #kategorija,
+    #administracija {
+        width: 100%;
+    }
+
+    #pocetna section,
+    #kategorija section {
+        margin-top: 20px;
+    }
+
+    #pocetna .clanci,
+    #kategorija .clanci,
+    #administracija .clacni {
+        flex-wrap: wrap;
+    }
+
+    #pocetna section h2 {
+        font-size: 30px;
+    }
+    
+    #pocetna article,
+    #kategorija article,
+    #administracija article {
+        width: 50%;
+        border: 0px;
+    }
+
+    #administracija h3 {
+        font-size: 40px;
+    }
+
+    #pocetna article img,
+    #kategorija article img {
+        height: 250px;
+        width: 100%;
+    }
+
+    #clanak {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #clanak article {
+        width: 80%;
+    }
+    
+    footer .copyright {
+        width: 100%;
+        align-items: center;
+    }
+
+    .unos {
+        width: 90%;
+    }
+
+    .prijava {
+        width: 40%;
+    }
+}
+
+@media (max-width: 720px) {
+
+    #pocetna section h2 {
+        font-size: 40px;
+    }
+
+    #pocetna .clanci,
+    #kategorija .clanci,
+    #administracija .clanci {
+        flex-direction: column;
+    }
+
+    #pocetna article,
+    #kategorija article,
+    #administracija article {
+        width: 100%;
+        border: 0px;
+    }
+
+    #pocetna article img,
+    #kategorija article img,
+    #administracija article img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .prijava {
+        width: 90%;
+    }
+
+    footer .copyright {
+        width: 100%;
+        align-items: center;
+    }
+}
